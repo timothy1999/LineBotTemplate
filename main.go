@@ -52,7 +52,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if message.Text=="gobot" {
 				
 					for i := 0; i < 10;i++{
-					if _, err := bot.PushMessage(event.Source.UserId, linebot.NewTextMessage("hello")).Do(); err != nil {
+					if _, err := bot.PushMessage(event.Source.UserID, linebot.NewTextMessage("hello")).Do(); err != nil {
 					}
 					
 					
