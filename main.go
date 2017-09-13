@@ -49,15 +49,17 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				if message.Text=="gobot" {
+				
 				
 					for i := 0; i < 10;i++{
 					if _, err := bot.PushMessage(event.Source.UserID, linebot.NewTextMessage("hello")).Do(); err != nil {
+					log.Print(err)
+
 					}
 					
 					
 					}
-				}
+				
 			}
 		}
 	}
