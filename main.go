@@ -56,13 +56,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				}
 				startedd = ^startedd
  				}
-				
-			}
 			case *linebot.ImageMessage:
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+"抽"+" OK!")).Do(); err != nil {
 					log.Print(err)
 				
 				}
+				
+			}
+
 			
 		}
 	}
