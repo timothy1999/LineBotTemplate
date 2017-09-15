@@ -1,0 +1,18 @@
+diff a/main.go b/main.go	(rejected hunks)
+@@ -49,8 +49,14 @@
+ 		if event.Type == linebot.EventTypeMessage {
+ 			switch message := event.Message.(type) {
+ 			case *linebot.TextMessage:
+-				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" OK!")).Do(); err != nil {
+-					log.Print(err)
++				if message.Text=="gobot" {
++				
++					for i := 0; i < 10;i++{
++					if _, err := bot.PushMessage(event.Source.UserId, linebot.NewTextMessage("hello")).Do(); err != nil {
++					}
++					
++					
++					}
+ 				}
+ 			}
+ 		}

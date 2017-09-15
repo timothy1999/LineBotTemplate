@@ -62,6 +62,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				
 				}
 				
+ 				}else{
+ 					if startedd{
+ 						if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你覺得你能超越可樂嗎")).Do(); err != nil {
+							log.Print(err)
+				
+						}
+
+ 					}
  				}
 			case *linebot.ImageMessage:
 				if startedd{
