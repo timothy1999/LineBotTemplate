@@ -67,6 +67,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("欲求不滿的自己回家撸")).Do(); err != nil {
 					log.Print(err)
 					}
+ 				}else if strings.Contains(message.Text,"昶"){
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想體驗永日火暴!?")).Do(); err != nil {
+					log.Print(err)
+					}
  				}else if message.Text=="你認識小雷嗎"||message.Text=="你認識小雷嗎?"||message.Text=="你認識小雷嗎？"||strings.Contains(message.Text,"小雷"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("它根俊能一樣肥，我比他強多了!")).Do(); err != nil {
 					log.Print(err)
