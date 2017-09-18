@@ -68,10 +68,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print(err)
 					}
  				}else if strings.Contains(message.Text,"昶"){
- 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想體驗永日火暴!?")).Do(); err != nil {
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想體驗永日火暴!?可是我還不會發照片耶")).Do(); err != nil {
 					log.Print(err)
 					}
- 				}else if strings.Contains(message.Text,"yee"){
+ 				}else if strings.Contains(message.Text,"yee")||strings.Contains(message.Text,"Yee"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("都幾歲了，還yee")).Do(); err != nil {
 					log.Print(err)
 					}
