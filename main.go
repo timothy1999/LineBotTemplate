@@ -62,7 +62,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				
 				}
 				
- 				}else if message.Text=="幹"{
+ 				}else if message.Text=="幹"||strings.ContainsAny(message.Text, "幹"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("欲求不滿的自己回家撸")).Do(); err != nil {
 					log.Print(err)
 					}
