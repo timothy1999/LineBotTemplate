@@ -63,7 +63,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				
 				}
 				
- 				}else if message.Text=="幹"||strings.Contains(message.Text,"幹你"){
+ 				}else if message.Text=="幹"||strings.Contains(message.Text,"幹你"||strings.Contains(message.Text,"幹幹"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("欲求不滿的自己回家撸")).Do(); err != nil {
 					log.Print(err)
 					}
@@ -93,7 +93,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					}
  				}else{
  					if startedd{
- 						if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("考完北模還不去喝可樂")).Do(); err != nil {
+ 						if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("喔是喔邱俊熊")).Do(); err != nil {
 							log.Print(err)
 				
 						}
