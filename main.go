@@ -72,7 +72,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print(err)
 					}
  				}else if strings.Contains(message.Text,"昶"){
- 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想體驗永日火暴!?可是我還不會發照片耶")).Do(); err != nil {
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想體驗永日火暴!?可是我還不會選照片耶，你要推薦嗎")).Do(); err != nil {
 					log.Print(err)
 					}
  				}else if strings.Contains(message.Text,"早安"){
