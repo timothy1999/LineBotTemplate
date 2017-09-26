@@ -64,7 +64,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				}
 				
  				}else if message.Text=="幹"||strings.Contains(message.Text,"幹你")||strings.Contains(message.Text,"幹幹"){
- 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("欲求不滿的自己回家撸"),linebot.NewImageMessage("https://fsp.youthwant.com/images/580_785386238269148.jpg","https://fsp.youthwant.com/images/580_785386238269148.jpg")).Do(); err != nil {
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("好喔"),linebot.NewImageMessage("https://fsp.youthwant.com/images/580_785386238269148.jpg","https://fsp.youthwant.com/images/580_785386238269148.jpg")).Do(); err != nil {
 					log.Print(err)
 					}
  				}else if message.Text=="尻"||strings.Contains(message.Text,"尻尻"){
