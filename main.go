@@ -69,7 +69,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					}
  				}else if strings.Contains(message.Text,"造物者")||strings.Contains(message.Text, "造化者")||strings.Contains(message.Text, "天帝")||strings.Contains(message.Text, "萬王之王")||strings.Contains(message.Text, "烏醋")||strings.Contains(message.Text, "強胃散")||strings.Contains(message.Text, "殺")||strings.Contains(message.Text, "爆屁")||strings.Contains(message.Text, "莊園"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想清除體內負能量?"),
- 						linebot.NewImageMessage("http://www.ghostisland.com.tw/upload/2014/11/20/file_546ccc179b288.JPG","http://www.ghostisland.com.tw/upload/2014/11/20/file_546ccc179b288.JPG"),
+ 						linebot.NewImageMessage("https://truth.bahamut.com.tw/s01/201307/3e55f59e1d2e01285be1a9ebe7a83401.JPG","https://truth.bahamut.com.tw/s01/201307/3e55f59e1d2e01285be1a9ebe7a83401.JPG"),
  						linebot.NewTextMessage("我很遺憾") ).Do(); err != nil {
 					log.Print(err)
 					}
