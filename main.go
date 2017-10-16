@@ -67,6 +67,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("好喔"),linebot.NewImageMessage("https://fsp.youthwant.com/images/580_785386238269148.jpg","https://fsp.youthwant.com/images/580_785386238269148.jpg")).Do(); err != nil {
 					log.Print(err)
 					}
+ 				}else if strings.Contains(message.Text,"造物者")||strings.Contains(message.Text, "造化者")||strings.Contains(message.Text, "天帝")||strings.Contains(message.Text, "萬王之王")||strings.Contains(message.Text, "烏醋")||strings.Contains(message.Text, "強胃散")||strings.Contains(message.Text, "殺")||strings.Contains(message.Text, "爆屁")||strings.Contains(message.Text, "莊園"){
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想清除體內負能量?"),linebot.NewImageMessage("https://www.hahatai.com/sites/default/files/f7X150S%20-%20Imgur.gif","https://www.hahatai.com/sites/default/files/f7X150S%20-%20Imgur.gif")).Do(); err != nil {
+					log.Print(err)
+					}
  				}else if message.Text=="尻"||strings.Contains(message.Text,"尻尻"){
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("聽說阿麵禁尻考爆好，還不+1")).Do(); err != nil{
 					log.Print(err)
@@ -87,7 +91,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print(err)
 					}
  				}else if message.Text=="你認識小雷嗎"||message.Text=="你認識小雷嗎?"||message.Text=="你認識小雷嗎？"||strings.Contains(message.Text,"小雷"){
- 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("它根俊能一樣肥，我比他強多了!")).Do(); err != nil {
+ 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("它跟俊能一樣肥，我比他強多了!")).Do(); err != nil {
 					log.Print(err)
 					}
  				}else if message.Text=="抽"||message.Text=="抽卡"{
