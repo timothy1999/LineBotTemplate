@@ -24,7 +24,7 @@ import (
 )
 
 var story [3]string
-int storynum = 3;
+int storynum = 3
 
 var bot *linebot.Client
 var startedd bool = false
