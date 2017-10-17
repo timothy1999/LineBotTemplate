@@ -25,7 +25,7 @@ import (
 
 var story [3]string
 var storynum = 3
-
+var r = rand.New(rand.NewSource(time.Now().UnixNano()))
 var bot *linebot.Client
 var startedd bool = false
 func main() {
@@ -125,7 +125,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print(err)
 					}
  				}else if message.Text=="講個故事"||message.Text=="故事"{
- 					r := rand.New(rand.NewSource(time.Now().UnixNano()));
+ 		//			r := rand.New(rand.NewSource(time.Now().UnixNano()));
  					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(story[r.Intn(storynum)])).Do(); err != nil {
 					log.Print(err)
 					}
